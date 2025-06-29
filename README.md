@@ -1,6 +1,6 @@
 # 🤖🍎 Fruit-Picking-Robot-Vision-System
 
-> Intelligent Fruit Picking Robot Vision Recognition System | Real-time Fruit Detection and Localization Based on Deep Learning
+> 智能水果采摘机器人视觉识别系统 | 基于深度学习的实时果实检测与定位
 
 <div align="center">
 
@@ -15,122 +15,120 @@
 ![contributors](https://img.shields.io/badge/Contributors-Welcome-orange.svg)
 ![stars](https://img.shields.io/github/stars/your-username/Fruit-Picking-Robot-Vision-System?style=social)
 
-[🇨🇳 中文](README.md) | [🇺🇸 English](README_EN.md)
-
 </div>
 
 ---
 
-## 🌟 Project Highlights
+## 🌟 项目亮点
 
 <table>
 <tr>
 <td>
 
-**🎯 Core Technologies**
-- 🔥 YOLOv8 Deep Learning Detection
-- 📷 RGB-D Vision Fusion
-- ⚡ Real-time Processing (30+ FPS)
-- 🎪 3D Spatial Localization
-- 🔄 ROS Ecosystem Integration
+**🎯 核心技术**
+- 🔥 YOLOv8深度学习检测
+- 📷 RGB-D视觉融合
+- ⚡ 实时处理 (30+ FPS)
+- 🎪 3D空间定位
+- 🔄 ROS生态集成
 
 </td>
 <td>
 
-**🚀 Application Scenarios**
-- 🌾 Smart Agriculture
-- 🤖 Picking Robots
-- 📊 Agricultural Data Collection
-- 🏭 Automated Sorting
-- 🔬 Agricultural Research
+**🚀 应用场景**
+- 🌾 智慧农业
+- 🤖 采摘机器人
+- 📊 农业数据采集
+- 🏭 自动化分拣
+- 🔬 农业研究
 
 </td>
 </tr>
 </table>
 
-## 📋 Table of Contents
+## 📋 目录
 
-- [🌟 Project Highlights](#-project-highlights)
-- [🎪 System Demo](#-system-demo)
-- [🛠️ Technical Architecture](#️-technical-architecture)
-- [📦 System Requirements](#-system-requirements)
-- [🚀 Quick Start](#-quick-start)
-- [📁 Project Structure](#-project-structure)
-- [🔧 Core Features](#-core-features)
-- [📊 Performance Metrics](#-performance-metrics)
-- [🎯 API Documentation](#-api-documentation)
-- [🤝 Contributing](#-contributing)
-- [📚 References](#-references)
-- [📄 License](#-license)
+- [🌟 项目亮点](#-项目亮点)
+- [🎪 系统演示](#-系统演示)
+- [🛠️ 技术架构](#️-技术架构)
+- [📦 环境要求](#-环境要求)
+- [🚀 快速开始](#-快速开始)
+- [📁 项目结构](#-项目结构)
+- [🔧 核心功能](#-核心功能)
+- [📊 性能指标](#-性能指标)
+- [🎯 API文档](#-api文档)
+- [🤝 贡献指南](#-贡献指南)
+- [📚 参考资料](#-参考资料)
+- [📄 许可证](#-许可证)
 
 ---
 
-## 🎪 System Demo
+## 🎪 系统演示
 
 <div align="center">
 
-| Real-time Detection | 3D Localization | Robot Integration |
+| 实时检测 | 3D定位 | 机器人集成 |
 |:---:|:---:|:---:|
-| ![Detection Demo](https://via.placeholder.com/200x150/4CAF50/white?text=Real-time+Detection) | ![Localization Demo](https://via.placeholder.com/200x150/2196F3/white?text=3D+Localization) | ![Integration Demo](https://via.placeholder.com/200x150/FF9800/white?text=Robot+Integration) |
-| Millisecond-level apple detection | Precise spatial coordinate calculation | Seamless ROS system integration |
+| ![检测演示](https://via.placeholder.com/200x150/4CAF50/white?text=Real-time+Detection) | ![定位演示](https://via.placeholder.com/200x150/2196F3/white?text=3D+Localization) | ![集成演示](https://via.placeholder.com/200x150/FF9800/white?text=Robot+Integration) |
+| 毫秒级响应的苹果检测 | 精确的空间坐标计算 | 无缝的ROS系统集成 |
 
 </div>
 
-**🎬 [Watch Demo Video](https://your-demo-video-link.com)**
+**🎬 [观看演示视频](https://your-demo-video-link.com)**
 
 ---
 
-## 🛠️ Technical Architecture
+## 🛠️ 技术架构
 
 ```mermaid
 graph TB
-    subgraph "Hardware Layer"
-        A[Orbbec Dabai Camera] --> B[RGB Image Stream]
-        A --> C[Depth Image Stream]
+    subgraph "硬件层"
+        A[奥比中光 Dabai 相机] --> B[RGB图像流]
+        A --> C[深度图像流]
     end
     
-    subgraph "Perception Layer"
-        B --> D[YOLOv8 Detector]
-        C --> E[Depth Processor]
-        D --> F[Target Bounding Boxes]
-        E --> G[Depth Information]
+    subgraph "感知层"
+        B --> D[YOLOv8 检测器]
+        C --> E[深度处理器]
+        D --> F[目标边界框]
+        E --> G[深度信息]
     end
     
-    subgraph "Fusion Layer"
-        F --> H[Coordinate Calculator]
+    subgraph "融合层"
+        F --> H[坐标计算器]
         G --> H
-        H --> I[3D Coordinates]
+        H --> I[3D坐标]
     end
     
-    subgraph "Application Layer"
-        I --> J[ROS Topic Publisher]
-        J --> K[Robot Control]
-        J --> L[Data Recording]
-        J --> M[Visualization Interface]
+    subgraph "应用层"
+        I --> J[ROS话题发布]
+        J --> K[机器人控制]
+        J --> L[数据记录]
+        J --> M[可视化界面]
     end
 ```
 
 ---
 
-## 📦 System Requirements
+## 📦 环境要求
 
-### 🖥️ Hardware Requirements
+### 🖥️ 硬件需求
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
+| 组件 | 最低要求 | 推荐配置 |
+|------|----------|----------|
 | **CPU** | Intel i5 / AMD R5 | Intel i7 / AMD R7 |
-| **Memory** | 8GB RAM | 16GB+ RAM |
-| **GPU** | Integrated Graphics | NVIDIA GTX 1060+ |
-| **Storage** | 20GB Available | SSD 50GB+ |
-| **Camera** | USB 2.0 | USB 3.0 |
+| **内存** | 8GB RAM | 16GB+ RAM |
+| **显卡** | 集成显卡 | NVIDIA GTX 1060+ |
+| **存储** | 20GB可用空间 | SSD 50GB+ |
+| **相机** | USB 2.0 | USB 3.0 |
 
-### 💻 Software Environment
+### 💻 软件环境
 
 ```bash
 OS: Ubuntu 20.04 LTS
 ROS: Noetic Ninjemys
 Python: 3.8+
-CUDA: 11.0+ (Optional, for GPU acceleration)
+CUDA: 11.0+ (可选，GPU加速)
 ```
 
 ### 📋 requirements.txt
@@ -153,52 +151,52 @@ scipy>=1.7.0
 
 ---
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### 📥 One-Click Install Script
+### 📥 一键安装脚本
 
 ```bash
-# Download and run installation script
+# 下载并运行安装脚本
 wget https://raw.githubusercontent.com/your-username/Fruit-Picking-Robot-Vision-System/main/install.sh
 chmod +x install.sh
 ./install.sh
 ```
 
-### 🔧 Manual Installation
+### 🔧 手动安装
 
-#### 1️⃣ Install ROS Environment
+#### 1️⃣ 安装ROS环境
 ```bash
-# Use fishros one-click installation for ROS Noetic
+# 使用fishros一键安装ROS Noetic
 wget http://fishros.com/install -O fishros && bash fishros
 ```
 
-#### 2️⃣ Create Workspace
+#### 2️⃣ 创建工作空间
 ```bash
 mkdir -p ~/fruit_picking_ws/src
 cd ~/fruit_picking_ws/src
 
-# Clone the project
+# 克隆项目
 git clone https://github.com/your-username/Fruit-Picking-Robot-Vision-System.git
 git clone https://github.com/orbbec/ros_astra_camera.git
 ```
 
-#### 3️⃣ Install Dependencies
+#### 3️⃣ 安装依赖
 ```bash
 cd ~/fruit_picking_ws/src/Fruit-Picking-Robot-Vision-System
 pip3 install -r requirements.txt
 
-# Install ROS dependencies
+# 安装ROS依赖
 rosdep install --from-paths . --ignore-src -r -y
 ```
 
-#### 4️⃣ Build Project
+#### 4️⃣ 编译项目
 ```bash
 cd ~/fruit_picking_ws
 catkin_make
 source devel/setup.bash
 ```
 
-#### 5️⃣ Configure Camera Permissions
+#### 5️⃣ 配置相机权限
 ```bash
 source ~/fruit_picking_ws/devel/setup.bash
 roscd astra_camera
@@ -206,123 +204,123 @@ roscd astra_camera
 sudo udevadm control --reload && sudo udevadm trigger
 ```
 
-### 🎯 Launch System
+### 🎯 启动系统
 
-#### 🚀 Quick Launch (Recommended)
+#### 🚀 快速启动（推荐）
 ```bash
-# One-click launch all nodes
+# 一键启动所有节点
 roslaunch fruit_picking_robot fruit_picking_system.launch
 ```
 
-#### 🔧 Step-by-Step Launch
+#### 🔧 分步启动
 ```bash
-# Terminal 1: Launch camera
+# 终端1: 启动相机
 roslaunch astra_camera dabai.launch
 
-# Terminal 2: Launch detection node
+# 终端2: 启动检测节点
 rosrun fruit_picking_robot enhanced_simplified_camera_subscriber_node.py
 
-# Terminal 3: Launch visualization (optional)
+# 终端3: 启动可视化（可选）
 rosrun rviz rviz -d config/fruit_picking.rviz
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 项目结构
 
 ```
 Fruit-Picking-Robot-Vision-System/
-├── 📄 README.md                              # Project documentation
-├── 📄 README_EN.md                           # English documentation
-├── 📄 requirements.txt                       # Python dependencies
-├── 📄 install.sh                            # One-click install script
-├── 📄 CMakeLists.txt                        # CMake configuration
-├── 📄 package.xml                           # ROS package configuration
-├── 📂 cmake/                                # CMake modules
+├── 📄 README.md                              # 项目说明文档
+├── 📄 README_EN.md                           # 英文说明文档  
+├── 📄 requirements.txt                       # Python依赖
+├── 📄 install.sh                            # 一键安装脚本
+├── 📄 CMakeLists.txt                        # CMake配置
+├── 📄 package.xml                           # ROS包配置
+├── 📂 cmake/                                # CMake模块
 │   ├── add_dependency.cmake
 │   └── message_type.cmake
-├── 📂 launch/                               # Launch files
-│   ├── 🚀 fruit_picking_system.launch       # System launch file
-│   ├── 🚀 camera_only.launch               # Camera only launch
-│   └── 🚀 detection_only.launch            # Detection only launch
-├── 📂 config/                               # Configuration files
-│   ├── ⚙️ camera_params.yaml               # Camera parameters
-│   ├── ⚙️ detection_params.yaml            # Detection parameters
-│   └── 🎨 fruit_picking.rviz               # RVIZ visualization config
-├── 📂 scripts/                              # Python scripts
-│   ├── 🐍 enhanced_simplified_camera_subscriber_node.py  # Main detection node
-│   ├── 🐍 camera_subscriber_node.py         # Camera subscriber node
-│   ├── 🐍 enhanced_coordinate_listener.py   # Coordinate listener node
-│   └── 🐍 visualizer_node.py               # Visualization node
-├── 📂 src/                                  # C++ source code
+├── 📂 launch/                               # 启动文件
+│   ├── 🚀 fruit_picking_system.launch       # 系统启动文件
+│   ├── 🚀 camera_only.launch               # 仅相机启动
+│   └── 🚀 detection_only.launch            # 仅检测启动
+├── 📂 config/                               # 配置文件
+│   ├── ⚙️ camera_params.yaml               # 相机参数
+│   ├── ⚙️ detection_params.yaml            # 检测参数
+│   └── 🎨 fruit_picking.rviz               # RVIZ可视化配置
+├── 📂 scripts/                              # Python脚本
+│   ├── 🐍 enhanced_simplified_camera_subscriber_node.py  # 主检测节点
+│   ├── 🐍 camera_subscriber_node.py         # 相机订阅节点
+│   ├── 🐍 enhanced_coordinate_listener.py   # 坐标监听节点
+│   └── 🐍 visualizer_node.py               # 可视化节点
+├── 📂 src/                                  # C++源码
 │   ├── 📂 main/
 │   │   ├── CMakeLists.txt
 │   │   ├── include/main.hpp
 │   │   └── sources/main.cpp
-│   ├── 📂 yolo/                            # YOLO detection module
+│   ├── 📂 yolo/                            # YOLO检测模块
 │   │   ├── CMakeLists.txt
 │   │   ├── yolo.h
 │   │   └── yolov8/
 │   │       ├── include/Yolov8.hpp
 │   │       ├── sources/Yolov8.cpp
-│   │       └── model/                      # Model files
-│   │           ├── 🧠 best.onnx            # ONNX model
-│   │           ├── 🧠 best.pt              # PyTorch model
-│   │           └── 📝 classes.txt          # Class labels
-│   └── 📂 external/                        # External dependencies
+│   │       └── model/                      # 模型文件
+│   │           ├── 🧠 best.onnx            # ONNX模型
+│   │           ├── 🧠 best.pt              # PyTorch模型
+│   │           └── 📝 classes.txt          # 类别标签
+│   └── 📂 external/                        # 外部依赖
 │       ├── external.cpp
 │       ├── external.h
-│       └── serial/                         # Serial communication
-├── 📂 msg/                                  # Custom messages
-│   ├── 📧 AppleDetection.msg               # Apple detection message
-│   └── 📧 FruitCoordinate.msg              # Fruit coordinate message
-├── 📂 srv/                                  # Service definitions
-│   └── 🔧 GetNearestFruit.srv              # Get nearest fruit service
-├── 📂 docs/                                # Documentation
-│   ├── 📖 installation_guide.md            # Installation guide
-│   ├── 📖 api_reference.md                 # API reference
-│   ├── 📖 troubleshooting.md               # Troubleshooting
-│   └── 📖 performance_tuning.md            # Performance tuning
-├── 📂 tests/                               # Test files
-│   ├── 🧪 test_detection.py               # Detection tests
-│   ├── 🧪 test_coordinate.py              # Coordinate tests
-│   └── 🧪 test_integration.py             # Integration tests
-└── 📂 examples/                            # Example code
-    ├── 💡 basic_usage.py                  # Basic usage example
-    ├── 💡 robot_integration.py            # Robot integration example
-    └── 💡 data_collection.py              # Data collection example
+│       └── serial/                         # 串口通信
+├── 📂 msg/                                  # 自定义消息
+│   ├── 📧 AppleDetection.msg               # 苹果检测消息
+│   └── 📧 FruitCoordinate.msg              # 水果坐标消息
+├── 📂 srv/                                  # 服务定义
+│   └── 🔧 GetNearestFruit.srv              # 获取最近水果服务
+├── 📂 docs/                                # 文档
+│   ├── 📖 installation_guide.md            # 安装指南
+│   ├── 📖 api_reference.md                 # API参考
+│   ├── 📖 troubleshooting.md               # 故障排除
+│   └── 📖 performance_tuning.md            # 性能调优
+├── 📂 tests/                               # 测试文件
+│   ├── 🧪 test_detection.py               # 检测测试
+│   ├── 🧪 test_coordinate.py              # 坐标测试
+│   └── 🧪 test_integration.py             # 集成测试
+└── 📂 examples/                            # 示例代码
+    ├── 💡 basic_usage.py                  # 基础使用示例
+    ├── 💡 robot_integration.py            # 机器人集成示例
+    └── 💡 data_collection.py              # 数据采集示例
 ```
 
 ---
 
-## 🔧 Core Features
+## 🔧 核心功能
 
-### 🎯 Real-time Object Detection
-- **Algorithm**: YOLOv8 object detection network
-- **Detection Objects**: Apples, pears, peaches, and other fruits
-- **Accuracy**: mAP@0.5 > 0.85
-- **Speed**: 30+ FPS (GPU) / 10+ FPS (CPU)
+### 🎯 实时目标检测
+- **算法**: YOLOv8目标检测网络
+- **检测对象**: 苹果、梨子、桃子等水果
+- **精度**: mAP@0.5 > 0.85
+- **速度**: 30+ FPS (GPU) / 10+ FPS (CPU)
 
-### 📏 3D Coordinate Calculation
+### 📏 3D坐标计算
 ```python
-# Core algorithm example
+# 核心算法示例
 def calculate_3d_coordinate(bbox, depth_image, camera_info):
     """
-    Calculate 3D coordinates of detected targets
+    计算检测目标的3D坐标
     
     Args:
-        bbox: Bounding box [x1, y1, x2, y2]
-        depth_image: Depth image
-        camera_info: Camera intrinsics
+        bbox: 边界框 [x1, y1, x2, y2]
+        depth_image: 深度图像
+        camera_info: 相机内参
     
     Returns:
-        Point3D: 3D coordinates (x, y, z)
+        Point3D: 3D坐标 (x, y, z)
     """
     center_x = (bbox[0] + bbox[2]) // 2
     center_y = (bbox[1] + bbox[3]) // 2
     depth = depth_image[center_y, center_x]
     
-    # Pixel to world coordinates
+    # 像素坐标转世界坐标
     x = (center_x - camera_info.cx) * depth / camera_info.fx
     y = (center_y - camera_info.cy) * depth / camera_info.fy
     z = depth
@@ -330,31 +328,31 @@ def calculate_3d_coordinate(bbox, depth_image, camera_info):
     return Point3D(x, y, z)
 ```
 
-### 🔄 ROS System Integration
-- **Topic Communication**: Publish/Subscribe mechanism
-- **Service Calls**: Synchronous/Asynchronous services
-- **Parameter Server**: Dynamic parameter configuration
-- **tf Transforms**: Coordinate frame transformations
+### 🔄 ROS系统集成
+- **话题通信**: 发布/订阅机制
+- **服务调用**: 同步/异步服务
+- **参数服务器**: 动态参数配置
+- **tf变换**: 坐标系转换
 
 ---
 
-## 📊 Performance Metrics
+## 📊 性能指标
 
 <div align="center">
 
-### 🎯 Detection Performance
+### 🎯 检测性能
 
-| Metric | CPU Mode | GPU Mode |
-|--------|----------|----------|
-| **Detection Accuracy (mAP@0.5)** | 0.85+ | 0.87+ |
-| **Detection Speed (FPS)** | 12-15 | 30-45 |
-| **Latency (ms)** | 80-100 | 25-35 |
-| **Memory Usage (GB)** | 2-3 | 4-6 |
+| 指标 | CPU模式 | GPU模式 |
+|------|---------|---------|
+| **检测精度 (mAP@0.5)** | 0.85+ | 0.87+ |
+| **检测速度 (FPS)** | 12-15 | 30-45 |
+| **延迟 (ms)** | 80-100 | 25-35 |
+| **内存占用 (GB)** | 2-3 | 4-6 |
 
-### 📏 Localization Accuracy
+### 📏 定位精度
 
-| Distance Range | XY Accuracy | Z Accuracy | Angle Adaptation |
-|----------------|-------------|------------|------------------|
+| 距离范围 | XY精度 | Z精度 | 角度适应 |
+|----------|--------|-------|----------|
 | **0.5-1.0m** | ±2cm | ±3cm | ±45° |
 | **1.0-2.0m** | ±5cm | ±8cm | ±35° |
 | **2.0-3.0m** | ±10cm | ±15cm | ±25° |
@@ -363,35 +361,35 @@ def calculate_3d_coordinate(bbox, depth_image, camera_info):
 
 ---
 
-## 🎯 API Documentation
+## 🎯 API文档
 
-### 📡 ROS Topics
+### 📡 ROS话题
 
-#### Subscribed Topics
-| Topic Name | Message Type | Frequency | Description |
-|------------|--------------|-----------|-------------|
-| `/camera/color/image_raw` | `sensor_msgs/Image` | 30Hz | RGB image stream |
-| `/camera/depth/image_raw` | `sensor_msgs/Image` | 30Hz | Depth image stream |
-| `/camera/color/camera_info` | `sensor_msgs/CameraInfo` | 30Hz | Camera calibration info |
+#### 订阅话题
+| 话题名 | 消息类型 | 频率 | 描述 |
+|--------|----------|------|------|
+| `/camera/color/image_raw` | `sensor_msgs/Image` | 30Hz | RGB图像流 |
+| `/camera/depth/image_raw` | `sensor_msgs/Image` | 30Hz | 深度图像流 |
+| `/camera/color/camera_info` | `sensor_msgs/CameraInfo` | 30Hz | 相机标定信息 |
 
-#### Published Topics
-| Topic Name | Message Type | Frequency | Description |
-|------------|--------------|-----------|-------------|
-| `/fruit_detection/detections` | `AppleDetection[]` | 30Hz | Detection results list |
-| `/fruit_detection/nearest_fruit` | `geometry_msgs/Point` | 30Hz | Nearest fruit coordinates |
-| `/fruit_detection/detection_image` | `sensor_msgs/Image` | 30Hz | Annotated image |
-| `/fruit_detection/statistics` | `std_msgs/String` | 1Hz | Detection statistics |
+#### 发布话题
+| 话题名 | 消息类型 | 频率 | 描述 |
+|--------|----------|------|------|
+| `/fruit_detection/detections` | `AppleDetection[]` | 30Hz | 检测结果列表 |
+| `/fruit_detection/nearest_fruit` | `geometry_msgs/Point` | 30Hz | 最近水果坐标 |
+| `/fruit_detection/detection_image` | `sensor_msgs/Image` | 30Hz | 标注后的图像 |
+| `/fruit_detection/statistics` | `std_msgs/String` | 1Hz | 检测统计信息 |
 
-### 🔧 ROS Services
+### 🔧 ROS服务
 
 ```bash
-# Get nearest fruit coordinates
+# 获取最近水果坐标
 rosservice call /get_nearest_fruit "{}"
 
-# Switch detection mode
+# 切换检测模式
 rosservice call /set_detection_mode "mode: 'apple'"
 
-# Save current detection results
+# 保存当前检测结果
 rosservice call /save_detection_data "filename: 'detection_log.json'"
 ```
 
@@ -400,26 +398,26 @@ rosservice call /save_detection_data "filename: 'detection_log.json'"
 ```python
 from fruit_picking_robot import FruitDetector
 
-# Initialize detector
+# 初始化检测器
 detector = FruitDetector(
     model_path="model/best.pt",
     confidence_threshold=0.5,
-    device="cuda"  # or "cpu"
+    device="cuda"  # 或 "cpu"
 )
 
-# Single image detection
+# 单张图像检测
 results = detector.detect(image)
 
-# Get nearest fruit
+# 获取最近的水果
 nearest_fruit = detector.get_nearest_fruit(image, depth_image)
-print(f"Nearest fruit coordinates: {nearest_fruit.x}, {nearest_fruit.y}, {nearest_fruit.z}")
+print(f"最近水果坐标: {nearest_fruit.x}, {nearest_fruit.y}, {nearest_fruit.z}")
 ```
 
 ---
 
-## 🛠️ Configuration
+## 🛠️ 配置说明
 
-### ⚙️ Camera Parameters (config/camera_params.yaml)
+### ⚙️ 相机参数配置 (config/camera_params.yaml)
 
 ```yaml
 camera:
@@ -429,29 +427,29 @@ camera:
   fps: 30
   
 depth:
-  min_distance: 0.3  # Minimum detection distance (meters)
-  max_distance: 5.0  # Maximum detection distance (meters)
+  min_distance: 0.3  # 最小检测距离(米)
+  max_distance: 5.0  # 最大检测距离(米)
   
 calibration:
-  fx: 525.0  # Focal length x
-  fy: 525.0  # Focal length y
-  cx: 320.0  # Principal point x
-  cy: 240.0  # Principal point y
+  fx: 525.0  # 焦距x
+  fy: 525.0  # 焦距y
+  cx: 320.0  # 光心x
+  cy: 240.0  # 光心y
 ```
 
-### 🎯 Detection Parameters (config/detection_params.yaml)
+### 🎯 检测参数配置 (config/detection_params.yaml)
 
 ```yaml
 detection:
   model_path: "model/best.pt"
   confidence_threshold: 0.5
   nms_threshold: 0.4
-  device: "cuda"  # "cuda" or "cpu"
+  device: "cuda"  # "cuda" 或 "cpu"
   
 filtering:
-  min_area: 100      # Minimum detection area
-  max_area: 50000    # Maximum detection area
-  aspect_ratio_range: [0.5, 2.0]  # Aspect ratio range
+  min_area: 100      # 最小检测区域
+  max_area: 50000    # 最大检测区域
+  aspect_ratio_range: [0.5, 2.0]  # 宽高比范围
   
 coordinate:
   filter_outliers: true
@@ -460,9 +458,9 @@ coordinate:
 
 ---
 
-## 🎮 Usage Examples
+## 🎮 使用示例
 
-### 🤖 Robot Integration Example
+### 🤖 机器人集成示例
 
 ```python
 #!/usr/bin/env python3
@@ -474,23 +472,23 @@ class FruitPickingRobot:
     def __init__(self):
         rospy.init_node('fruit_picking_robot')
         
-        # Subscribe to fruit detection results
+        # 订阅水果检测结果
         rospy.Subscriber('/fruit_detection/nearest_fruit', 
                         Point, self.fruit_callback)
         
-        # Publish robot control commands
+        # 发布机器人控制指令
         self.cmd_pub = rospy.Publisher('/robot_cmd', String, queue_size=10)
         
     def fruit_callback(self, msg):
-        """Handle detected fruit coordinates"""
+        """处理检测到的水果坐标"""
         if self.is_fruit_reachable(msg.x, msg.y, msg.z):
-            # Control robotic arm to move to fruit position
+            # 控制机械臂移动到水果位置
             cmd = f"move_to {msg.x:.2f} {msg.y:.2f} {msg.z:.2f}"
             self.cmd_pub.publish(cmd)
-            rospy.loginfo(f"Moving to fruit position: ({msg.x:.2f}, {msg.y:.2f}, {msg.z:.2f})")
+            rospy.loginfo(f"移动到水果位置: ({msg.x:.2f}, {msg.y:.2f}, {msg.z:.2f})")
         
     def is_fruit_reachable(self, x, y, z):
-        """Check if fruit is within reachable range"""
+        """判断水果是否在可达范围内"""
         distance = (x**2 + y**2 + z**2)**0.5
         return 0.5 <= distance <= 2.0
 
@@ -499,7 +497,7 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 
-### 📊 Data Collection Example
+### 📊 数据采集示例
 
 ```python
 #!/usr/bin/env python3
@@ -513,12 +511,12 @@ class DataCollector:
         self.bridge = CvBridge()
         self.image_count = 0
         
-        # Subscribe to detection result images
+        # 订阅检测结果图像
         rospy.Subscriber('/fruit_detection/detection_image', 
                         Image, self.save_image)
         
     def save_image(self, msg):
-        """Save detection result images"""
+        """保存检测结果图像"""
         try:
             cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
             filename = f"detection_{self.image_count:06d}.jpg"
@@ -526,10 +524,10 @@ class DataCollector:
             self.image_count += 1
             
             if self.image_count % 100 == 0:
-                rospy.loginfo(f"Saved {self.image_count} images")
+                rospy.loginfo(f"已保存 {self.image_count} 张图像")
                 
         except Exception as e:
-            rospy.logerr(f"Failed to save image: {e}")
+            rospy.logerr(f"保存图像失败: {e}")
 
 if __name__ == '__main__':
     rospy.init_node('data_collector')
@@ -539,144 +537,144 @@ if __name__ == '__main__':
 
 ---
 
-## 🔍 Troubleshooting
+## 🔍 故障排除
 
-### Common Issue Solutions
+### 常见问题解决
 
-#### ❓ Camera Cannot Start
+#### ❓ 相机无法启动
 ```bash
-# Check camera connection
+# 检查相机连接
 lsusb | grep Orbbec
 
-# Reinstall udev rules
+# 重新安装udev规则
 sudo ./scripts/create_udev_rules
 sudo udevadm control --reload
 ```
 
-#### ❓ Low Detection Accuracy
+#### ❓ 检测精度低
 ```yaml
-# Adjust detection parameters (config/detection_params.yaml)
+# 调整检测参数 (config/detection_params.yaml)
 detection:
-  confidence_threshold: 0.3  # Lower confidence threshold
-  nms_threshold: 0.5         # Adjust non-maximum suppression
+  confidence_threshold: 0.3  # 降低置信度阈值
+  nms_threshold: 0.5         # 调整非极大值抑制
 ```
 
-#### ❓ System Lag
+#### ❓ 系统卡顿
 ```bash
-# Check CPU/GPU usage
+# 检查CPU/GPU使用率
 htop
 nvidia-smi
 
-# Reduce image resolution
-# Set smaller image_width and image_height in camera_params.yaml
+# 降低图像分辨率
+# 在 camera_params.yaml 中设置较小的 image_width 和 image_height
 ```
 
-#### ❓ No ROS Topic Data
+#### ❓ ROS话题无数据
 ```bash
-# Check topic list
+# 检查话题列表
 rostopic list
 
-# View topic info
+# 查看话题信息
 rostopic info /camera/color/image_raw
 
-# Listen to topic data
+# 监听话题数据
 rostopic echo /fruit_detection/nearest_fruit
 ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 贡献指南
 
-We warmly welcome community contributions! 🎉
+我们热烈欢迎社区贡献！🎉
 
-### 📋 How to Contribute
+### 📋 贡献方式
 
-1. **🐛 Report Bugs**: Submit issues in [Issues](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/issues)
-2. **💡 Feature Suggestions**: Propose new features or improvements
-3. **📝 Documentation**: Improve documentation and tutorials
-4. **🔧 Code Contributions**: Submit code improvements and new features
+1. **🐛 报告Bug**: 在[Issues](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/issues)中提交问题
+2. **💡 功能建议**: 提出新功能或改进建议
+3. **📝 文档改进**: 完善文档和教程
+4. **🔧 代码贡献**: 提交代码改进和新功能
 
-### 🔄 Contribution Workflow
+### 🔄 贡献流程
 
 ```bash
-# 1. Fork this repository
+# 1. Fork 本仓库
 git clone https://github.com/your-username/Fruit-Picking-Robot-Vision-System.git
 
-# 2. Create feature branch
+# 2. 创建特性分支
 git checkout -b feature/awesome-feature
 
-# 3. Commit changes
+# 3. 提交更改
 git add .
-git commit -m "Add: awesome new feature"
+git commit -m "Add: 添加了很棒的新功能"
 
-# 4. Push to branch
+# 4. 推送到分支
 git push origin feature/awesome-feature
 
-# 5. Create Pull Request
+# 5. 创建 Pull Request
 ```
 
-### 📏 Code Standards
+### 📏 代码规范
 
-- **Python**: Follow PEP 8 guidelines
-- **C++**: Follow Google C++ Style Guide
-- **ROS**: Follow ROS programming standards
-- **Commit Messages**: Use [Conventional Commits](https://www.conventionalcommits.org/)
+- **Python**: 遵循 PEP 8 规范
+- **C++**: 遵循 Google C++ Style Guide
+- **ROS**: 遵循 ROS编程规范
+- **提交信息**: 使用 [Conventional Commits](https://www.conventionalcommits.org/)
 
-### 🧪 Testing Requirements
+### 🧪 测试要求
 
 ```bash
-# Run all tests
+# 运行所有测试
 cd ~/fruit_picking_ws
 catkin_make run_tests
 
-# Python unit tests
+# Python单元测试
 cd src/Fruit-Picking-Robot-Vision-System
 python -m pytest tests/
 ```
 
 ---
 
-## 📚 References
+## 📚 参考资料
 
-### 📖 Official Documentation
-- [ROS Noetic Official Documentation](http://wiki.ros.org/noetic)
-- [Orbbec Astra Camera ROS Package](https://github.com/orbbec/ros_astra_camera)
-- [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com/)
-- [OpenCV Computer Vision Library](https://docs.opencv.org/)
+### 📖 官方文档
+- [ROS Noetic 官方文档](http://wiki.ros.org/noetic)
+- [奥比中光 Astra 相机 ROS包](https://github.com/orbbec/ros_astra_camera)
+- [Ultralytics YOLOv8 文档](https://docs.ultralytics.com/)
+- [OpenCV 计算机视觉库](https://docs.opencv.org/)
 
-### 📄 Related Papers
+### 📄 相关论文
 - **YOLOv8**: "YOLOv8: A New Real-Time Object Detection Algorithm"
-- **Agricultural Robotics**: "Agricultural Robot Vision Systems: A Comprehensive Review"
-- **Fruit Detection**: "Deep Learning for Fruit Detection in Agricultural Robotics"
-- **3D Vision**: "RGB-D Object Detection and Localization in Unstructured Environments"
+- **农业机器人**: "Agricultural Robot Vision Systems: A Comprehensive Review"
+- **水果检测**: "Deep Learning for Fruit Detection in Agricultural Robotics"
+- **3D视觉**: "RGB-D Object Detection and Localization in Unstructured Environments"
 
-### 🎓 Learning Resources
-- [ROS Robot Programming Tutorial](http://wiki.ros.org/ROS/Tutorials)
-- [Deep Learning and Computer Vision](https://www.coursera.org/learn/deep-learning)
-- [Agricultural Robotics Technology Overview](https://www.example-agricultural-robotics.com)
-- [YOLO Object Detection Tutorial](https://ultralytics.com/tutorials)
+### 🎓 学习资源
+- [ROS机器人编程入门](http://wiki.ros.org/ROS/Tutorials)
+- [深度学习与计算机视觉](https://www.coursera.org/learn/deep-learning)
+- [农业机器人技术综述](https://www.example-agricultural-robotics.com)
+- [YOLO目标检测教程](https://ultralytics.com/tutorials)
 
-### 🔗 Related Projects
-- [Agricultural Robotics Open Source Collection](https://github.com/topics/agricultural-robotics)
-- [Fruit Detection Datasets](https://www.kaggle.com/datasets/fruit-detection)
-- [ROS Robot Navigation Stack](http://wiki.ros.org/navigation)
-
----
-
-## 🏆 Project Milestones
-
-- **v1.0.0** (2024-01) - Basic detection functionality
-- **v1.1.0** (2024-03) - Added 3D localization features
-- **v1.2.0** (2024-06) - Performance optimization and GPU support
-- **v2.0.0** (2024-09) - Multi-fruit type detection
-- **v2.1.0** (2024-12) - Robot integration interface
-- **v3.0.0** (2025-03) - AI-driven intelligent decision making 🚀
+### 🔗 相关项目
+- [农业机器人开源项目集合](https://github.com/topics/agricultural-robotics)
+- [水果检测数据集](https://www.kaggle.com/datasets/fruit-detection)
+- [ROS机器人导航包](http://wiki.ros.org/navigation)
 
 ---
 
-## 📄 License
+## 🏆 项目里程碑
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details
+- **v1.0.0** (2024-01) - 基础检测功能实现
+- **v1.1.0** (2024-03) - 添加3D定位功能  
+- **v1.2.0** (2024-06) - 性能优化和GPU支持
+- **v2.0.0** (2024-09) - 多水果类型检测
+- **v2.1.0** (2024-12) - 机器人集成接口
+- **v3.0.0** (2025-03) - AI驱动的智能决策 🚀
+
+---
+
+## 📄 许可证
+
+本项目采用 **MIT 许可证** - 查看 [LICENSE](LICENSE) 文件了解详情
 
 ```
 MIT License
@@ -689,54 +687,54 @@ of this software and associated documentation files (the "Software")...
 
 ---
 
-## 📞 Contact Us
+## 📞 联系我们
 
 <div align="center">
 
-### 🔗 Quick Links
+### 🔗 快速链接
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/your-username/Fruit-Picking-Robot-Vision-System)
 [![Issues](https://img.shields.io/badge/Issues-Bug%20Reports-red?logo=github)](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/issues)
 [![Discussions](https://img.shields.io/badge/Discussions-Community-blue?logo=github)](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/discussions)
 [![Wiki](https://img.shields.io/badge/Wiki-Documentation-green?logo=github)](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/wiki)
 
-### 👥 Development Team
+### 👥 开发团队
 
-| Role | Contact |
-|------|---------|
-| **Project Lead** | [your-name@example.com](mailto:your-name@example.com) |
-| **Technical Support** | [support@example.com](mailto:support@example.com) |
-| **Business Cooperation** | [business@example.com](mailto:business@example.com) |
-
-</div>
-
----
-
-## 🙏 Acknowledgments
-
-Special thanks to the following projects and organizations for their support:
-
-<div align="center">
-
-| 🏢 Organizations | 🛠️ Technologies | 👥 Communities |
-|------------------|------------------|----------------|
-| [ROS Community](https://www.ros.org/) | [Ultralytics](https://ultralytics.com/) | [Agricultural Robotics Enthusiasts](https://groups.example.com) |
-| [Orbbec](https://www.orbbec.com/) | [OpenCV](https://opencv.org/) | [Open Source Contributors](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/graphs/contributors) |
-| [NVIDIA](https://developer.nvidia.com/) | [PyTorch](https://pytorch.org/) | [User Feedback and Suggestions](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/discussions) |
+| 角色 | 联系方式 |
+|------|----------|
+| **项目负责人** | [your-name@example.com](mailto:your-name@example.com) |
+| **技术支持** | [support@example.com](mailto:support@example.com) |
+| **商务合作** | [business@example.com](mailto:business@example.com) |
 
 </div>
 
 ---
 
+## 🙏 致谢
+
+感谢以下项目和组织的大力支持：
+
 <div align="center">
 
-## 🌟 Support the Project
+| 🏢 组织 | 🛠️ 技术 | 👥 社区 |
+|---------|----------|---------|
+| [ROS Community](https://www.ros.org/) | [Ultralytics](https://ultralytics.com/) | [农业机器人爱好者群](https://groups.example.com) |
+| [奥比中光](https://www.orbbec.com/) | [OpenCV](https://opencv.org/) | [开源贡献者们](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/graphs/contributors) |
+| [NVIDIA](https://developer.nvidia.com/) | [PyTorch](https://pytorch.org/) | [用户反馈与建议](https://github.com/your-username/Fruit-Picking-Robot-Vision-System/discussions) |
 
-**If this project helps you, please give us a ⭐ Star!**
+</div>
+
+---
+
+<div align="center">
+
+## 🌟 支持项目
+
+**如果这个项目对你有帮助，请给我们一个 ⭐ Star！**
 
 [![Star History Chart](https://api.star-history.com/svg?repos=your-username/Fruit-Picking-Robot-Vision-System&type=Date)](https://star-history.com/#your-username/Fruit-Picking-Robot-Vision-System&Date)
 
-**Let's advance agricultural robotics technology together!** 🚀🌾
+**让我们一起推动农业机器人技术的发展！** 🚀🌾
 
 ---
 
