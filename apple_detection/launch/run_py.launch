@@ -1,0 +1,100 @@
+<!-- Enhanced Apple Detection Launch File -->
+<launch>
+  <!-- Model parameters -->
+  <arg name="model_path" default="/home/zy/ws_livox/src/apple_detection/yolo/yolov8/model/best.pt" />
+  <arg name="conf_threshold" default="0.8" />
+  <arg name="iou_threshold" default="0.6" />
+  <arg name="yolo_input_size" default="256" />
+  
+  <!-- Image parameters -->
+  <arg name="image_width" default="640" />
+  <arg name="image_height" default="400" />
+  
+  <!-- Depth parameters -->
+  <arg name="min_depth" default="0.1" />
+  <arg name="max_depth" default="0.8" />
+  
+  <!-- Enhanced depth filtering parameters -->
+  <arg name="depth_filter_radius" default="3" />
+  <arg name="min_valid_depth_points" default="5" />
+  
+  <!-- Camera topics -->
+  <arg name="color_topic" default="/camera/color/image_raw" />
+  <arg name="depth_topic" default="/camera/depth/image_raw" />
+  <arg name="color_info_topic" default="/camera/color/camera_info" />
+  
+  <!-- Output topics -->
+  <arg name="detection_topic" default="/apple_detection/coordinates" />
+  <arg name="detection_image_topic" default="/apple_detection/image" />
+  
+  <!-- Display settings -->
+  <arg name="enable_display" default="true" />
+
+  <!-- Enhanced Apple Detection Node -->
+  <node name="apple_detection_node" 
+        pkg="apple_detection" 
+        type="enhanced_simplified_camera_subscriber_node.py" 
+        output="screen"
+        respawn="false">
+    
+    <!-- Model parameters -->
+    <param name="model_path" value="$(arg model_path)" />
+    <param name="conf_threshold" value="$(arg conf_threshold)" />
+    <param name="iou_threshold" value="$(arg iou_threshold)" />
+    <param name="yolo_input_size" value="$(arg yolo_input_size)" />
+    
+    <!-- Image parameters -->
+    <param name="image_width" value="$(arg image_width)" />
+    <param name="image_height" value="$(arg image_height)" />
+    
+    <!-- Depth parameters -->
+    <param name="min_depth" value="$(arg min_depth)" />
+    <param name="max_depth" value="$(arg max_depth)" />
+    
+    <!-- Enhanced depth filtering parameters -->
+    <param name="depth_filter_radius" value="$(arg depth_filter_radius)" />
+    <param name="min_valid_depth_points" value="$(arg min_valid_depth_points)" />
+    
+    <!-- Topic parameters -->
+    <param name="color_topic" value="$(arg color_topic)" />
+    <param name="depth_topic" value="$(arg depth_topic)" />
+    <param name="color_info_topic" value="$(arg color_info_topic)" />
+    
+    <!-- Output topics -->
+    <param name="detection_topic" value="$(arg detection_topic)" />
+    <param name="detection_image_topic" value="$(arg detection_image_topic)" />
+    
+    <!-- Display settings -->
+    <param name="enable_display" value="$(arg enable_display)" />
+  </node>
+
+  <!-- Optional: Launch camera driver -->
+  <arg name="start_camera" default="false" />
+  <include if="$(arg start_camera)" file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="color_width" value="$(arg image_width)" />
+    <arg name="color_height" value="$(arg image_height)" />
+    <arg name="depth_width" value="$(arg image_width)" />
+    <arg name="depth_height" value="$(arg image_height)" />
+    <arg name="color_fps" value="30" />
+    <arg name="depth_fps" value="30" />
+  </include>
+
+  <!-- Optional: Launch RViz for visualization -->
+  <arg name="rviz" default="false" />
+  <node if="$(arg rviz)" 
+        name="rviz" 
+        pkg="rviz" 
+        type="rviz" 
+        args="-d $(find apple_detection)/config/apple_detection.rviz" 
+        output="screen" />
+
+  <!-- Optional: Record detection results -->
+  <arg name="record" default="false" />
+  <node if="$(arg record)" 
+        name="rosbag_record" 
+        pkg="rosbag" 
+        type="record" 
+        args="-o /tmp/apple_detection_ $(arg detection_topic) $(arg detection_image_topic)" 
+        output="screen" />
+
+</launch>
