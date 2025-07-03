@@ -1,0 +1,13 @@
+Header header
+float32 left_x      # 左摇杆X轴 (-1.0 到 1.0)
+float32 left_y      # 左摇杆Y轴 (-1.0 到 1.0)
+float32 right_x     # 右摇杆X轴 (-1.0 到 1.0)
+float32 right_y     # 右摇杆Y轴 (-1.0 到 1.0)
+float32 trigger_left  # 左扳机 (0.0 到 1.0)
+float32 trigger_right # 右扳机 (0.0 到 1.0)
+bool button_a       # 按钮A (0 或 1)
+bool button_b       # 按钮B (0 或 1)
+bool button_x       # 按钮X (0 或 1)
+bool button_y       # 按钮Y (0 或 1)
+bool button_lb      # 左 bumper (0 或 1)
+bool button_rb      # 右 bumper (0 或 1)

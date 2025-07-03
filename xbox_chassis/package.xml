@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>xbox_chassis</name>
+  <version>0.1.0</version>
+  <description>Xbox controller data receiver via network for chassis control</description>
+
+  <maintainer email="Guo1ZY@github.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>moveit_ctrl</build_depend>
+  <build_depend>message_runtime</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>moveit_ctrl</build_export_depend>
+  <build_export_depend>message_runtime</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>moveit_ctrl</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
