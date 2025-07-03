@@ -22,7 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   sensor_msgs
-  cv_bridge
+  cv_bridge_1
   image_transport
   message_filters
   tf2
@@ -43,7 +43,7 @@ catkin_package(
     rospy 
     std_msgs 
     sensor_msgs 
-    cv_bridge
+    cv_bridge_1
     image_transport 
     message_filters
     tf2
